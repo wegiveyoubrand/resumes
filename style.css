@@ -1,0 +1,208 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url(./1595697879049.jpg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-family: "Poppins";
+  color: #fff;
+}
+body::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  background: rgba(0, 0, 0, 0.85);
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  height: 4rem;
+  align-items: center;
+}
+
+header .nav {
+  display: none;
+}
+header ul {
+  display: flex;
+}
+header li {
+  position: relative;
+  cursor: pointer;
+}
+header i {
+  font-size: 2rem;
+  cursor: pointer;
+}
+header li::before,
+.aside li::before {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  background: rgb(255, 153, 0);
+  content: "";
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transform: scaleX(0.1);
+  transform-origin: left;
+  transition: 0.35s ease;
+}
+header li:hover::before,
+.aside li:hover::before {
+  transform: scaleX(1);
+  background: linear-gradient(to right, rgb(255, 153, 0), rgb(8, 7, 2));
+}
+header li:not(:last-child) {
+  margin-right: 20px;
+}
+header .menuToggler {
+}
+.logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  text-align: center;
+}
+.logo .name {
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: aqua;
+}
+.aside {
+  position: fixed;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
+  right: 0;
+  top: 0;
+  width: 100%;
+  max-width: 320px;
+  z-index: 1000;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: 0.3s ease;
+}
+.aside.active {
+  transform: scaleX(1);
+}
+.aside .closeMenu {
+  font-size: 2rem;
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+}
+.aside .closeMenu i:hover {
+  color: rgb(255, 153, 0);
+  cursor: pointer;
+}
+
+.aside ul {
+  padding: 20px;
+  margin-top: 20px;
+}
+.aside li {
+  position: relative;
+  height: 60px;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.aside li a {
+  display: grid;
+  height: 100%;
+  align-items: center;
+}
+main {
+  height: calc(100vh - 4rem);
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.6;
+}
+.hero {
+  width: 100%;
+  max-width: 920px;
+  margin: auto;
+}
+
+.hero .name {
+  font-size: 3rem;
+  line-height: 1;
+  letter-spacing: 5px;
+}
+
+.hero > div:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.hero .button {
+  position: relative;
+  display: inline-block;
+  background-color: #fff;
+  padding: 6px 10px;
+  margin-bottom: 10px;
+  color: #333;
+  text-decoration: none;
+  outline: none;
+  font-weight: bold;
+}
+.hero .button::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  content: "";
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: 0.3s ease;
+}
+
+.hero .button::after {
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  /* z-index: -1; */
+  height: 109%;
+  width: 10%;
+  content: "";
+  background-color: yellow;
+  z-index: -1;
+}
+.hero .button span {
+  position: relative;
+  z-index: 100;
+}
+
+.hero .button:hover {
+  color: #fff;
+}
+.hero .button:hover::before {
+  transform: scaleX(1);
+}

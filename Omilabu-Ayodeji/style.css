@@ -1,0 +1,179 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Poppins";
+}
+
+.main-container {
+  width: calc(100% - 300px);
+}
+
+.resume-summary {
+  position: fixed;
+  width: 300px;
+  overflow-y: scroll;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #07071f;
+  color: #fff;
+}
+
+.resume-summary h2 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 10px 0;
+  letter-spacing: 2px;
+  font-weight: 300;
+}
+
+.resume-summary footer {
+  bottom: 0;
+  height: 60px;
+  background-color: #fff;
+  color: #07071f;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  font-size: .75rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.resume-summary footer img {
+  object-fit: contain;
+  height: 20px;
+  margin-left: 20px;
+}
+
+.resume-summary > div {
+  margin-bottom: 2rem;
+}
+
+.resume-summary .profile {
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 251, 251, 0.5);
+  padding: 2rem 20px;
+}
+
+.resume-summary .profile img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  object-fit: contain;
+  height: 100%;
+}
+
+.resume-summary .profile-picture {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  background: #fff;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.resume-summary .profile-name {
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+.resume-summary .profile-title {
+  padding: 10px;
+}
+
+.resume-summary ul {
+  list-style: none;
+  padding-right: 5px;
+}
+
+.resume-summary ul li {
+  height: 40px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  background: #000;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 2rem 20px;
+  border-left: 5px solid snow;
+}
+
+.resume-summary ul li:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.resume-summary ul li.active {
+  background: #1f0e50;
+}
+
+.resume-summary .contact > div > div {
+  display: flex;
+  place-items: center;
+}
+
+.resume-summary .contact > div > div i {
+  margin-right: 10px;
+}
+
+.resume-summary .educations .education {
+  margin-bottom: 20px;
+}
+
+.resume-summary .educations .education .date {
+  font-size: 0.75rem;
+  color: #807d7d;
+}
+
+.resume-summary .educations .education .course {
+  color: aqua;
+  font-size: 0.85rem;
+}
+
+.main {
+  transform: translateX(300px);
+}
+
+.main main {
+  padding: 2rem 20px;
+}
+
+.main > div {
+  margin-bottom: 20px;
+}
+
+header {
+  padding: 20px;
+  background: #000;
+  margin: 0;
+  height: 4rem;
+  color: #fff;
+}
+
+.cd {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.button {
+  padding: 1rem;
+  background: #000;
+  border-radius: 5px;
+  border: 2px #eee solid;
+}
+/*# sourceMappingURL=style.css.map */
